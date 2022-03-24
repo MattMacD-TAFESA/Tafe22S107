@@ -57,8 +57,9 @@ namespace Calculator
 
 		private double CalculateMortgageRepayment(double P, double i, double n)
 		{
-			double M = P * (Math.Pow((i * (1 + i)), n) / (Math.Pow((1 + i), (n - 1))));
-
+			double M = P * i * (Math.Pow(1 + i, n) / (Math.Pow(1 + i, n - 1)));
+//			double A = Math.Pow((1 + i), n);
+//			double B = Math.Pow(1 + i, n - 1);
 
 			return M;
 		}
