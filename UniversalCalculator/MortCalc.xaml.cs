@@ -46,7 +46,6 @@ namespace Calculator
 
 			principalLoanamount = double.Parse(principalBorrowTextBox.Text);
 
-			//monthlyPayment = principalLoanamount * (Math.Pow((monthlyInterestRate * (1 + monthlyInterestRate)), monthstoRepay) / (Math.Pow(1 + monthlyInterestRate, monthstoRepay - 1)));
 			monthlyPayment = CalculateMortgageRepayment(principalLoanamount, monthlyInterestRate, monthstoRepay);
 
 			monthlyInterestTextBox.Text = monthlyInterestRate.ToString("P");
@@ -58,9 +57,6 @@ namespace Calculator
 		private double CalculateMortgageRepayment(double P, double i, double n)
 		{
 			double M = P * i * (Math.Pow(1 + i, n) / (Math.Pow(1 + i, n - 1)));
-//			double A = Math.Pow((1 + i), n);
-//			double B = Math.Pow(1 + i, n - 1);
-
 			return M;
 		}
 	}
