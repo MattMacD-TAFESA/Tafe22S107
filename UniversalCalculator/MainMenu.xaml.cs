@@ -32,6 +32,11 @@ namespace Calculator
 			this.Frame.Navigate(typeof(MainPage));
 		}
 
+		private void currConvButton_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(CurrencyConverter));
+		}
+
 		private void mortCalcButton_Click(object sender, RoutedEventArgs e)
 		{
 			this.Frame.Navigate(typeof(MortCalc));
